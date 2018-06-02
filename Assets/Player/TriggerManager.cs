@@ -6,6 +6,9 @@ public class TriggerManager : MonoBehaviour {
 
     public string ExitTargetTagName = "Exit";
 
+    public UnityEngine.Events.UnityEvent OnMazeEnds;
+
+
     // Use this for initialization
     void Start () {
 		
@@ -28,7 +31,7 @@ public class TriggerManager : MonoBehaviour {
         if (other.tag == ExitTargetTagName)
         {
             Debug.Log("well done. you exited the maze");
-
+            OnMazeEnds.Invoke();
         }
     }
 }

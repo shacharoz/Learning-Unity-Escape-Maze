@@ -41,4 +41,9 @@ public class TriggerWhenTimeEnds : MonoBehaviour {
         _isCountStarted = true;
         _startTime = Time.time;
     }
+
+    public void StopCountdown()
+    {
+        _isCountStarted = false;
+    }
 }
