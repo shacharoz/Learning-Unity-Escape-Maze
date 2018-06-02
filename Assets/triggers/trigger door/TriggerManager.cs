@@ -16,11 +16,19 @@ public class TriggerManager : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    
+
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collided with something");
+
+
+
+
         if (other.tag == ExitTargetTagName)
         {
             Debug.Log("well done. you exited the maze");
+
         }
     }
 }
