@@ -7,7 +7,7 @@ public class TriggerManager : MonoBehaviour {
     public string ExitTargetTagName = "Exit";
 
     public UnityEngine.Events.UnityEvent OnMazeEnds;
-
+    public UnityEngine.Events.UnityEvent OnMazeEndFail;
 
     // Use this for initialization
     void Start () {
@@ -24,6 +24,14 @@ public class TriggerManager : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collided with something");
+
+
+        if (other.tag == "Lava")
+        {
+            this.GetComponent<Animator>().SetTrigger("DieNow");
+            OnMazeEndFail.Invoke();
+
+        }
 
 
 
