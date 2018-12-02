@@ -2,3 +2,7 @@
 Library/
 
 UnityPackageManager/
+
+\.vs/Learning-Unity-Escape-Maze/v15/
+
+*.csproj
